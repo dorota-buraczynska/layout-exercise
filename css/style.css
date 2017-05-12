@@ -97,56 +97,63 @@ header {
 }
 
 .header-menu {
+    list-style-type: none;
+    /*overflow: hidden;*/
     float: right;
-
 }
 
 .header-menu li {
-    display: inline-block;
-    font-weight: bold;
-    padding: 0 25px;
-    position: relative;
+   display: inline-block;
 }
 
-.header-menu li:last-child {
+.header-menu li>a {
+    text-decoration: none;
+    color: white;
+    padding: 11px 25px;
+    font-weight: bold;
+}
+
+.header-menu li>a:last-child {
     padding-right: 0;
 }
 
-.header-menu li:first-child:hover .dropdown-menu {
-    display: block;
+.header-menu li a:hover, .dropdown:hover .dropbtn {
+    background-color: #2BCBAC;
 }
 
-.dropdown-menu {
+.dropdown-content {
     display: none;
     position: absolute;
     background-color: black;
-    left: 0;
-    top: 42px;
+    z-index: 1;
+    top: 54px;
+    font-size: 17px;
 }
 
-.dropdown-menu::before {
+.dropdown-content a {
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #2BCBAC;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content::before {
     content: "";
     position: absolute;
     top: -20px;
     left: 50%;
-    margin-right: -10px;
     border-width: 10px;
     border-style: solid;
     border-color: transparent transparent black transparent;
     transform: translateX(-50%);
-}
-
-.dropdown-menu li {
-    font-size: 17px;
-    display: block;
-    font-weight: 500;
-    padding-top: 12px;
-    padding-right: 12px;
-    padding-left: 12px;
-}
-
-.dropdown-menu li:last-child {
-    padding-bottom: 12px;
 }
 
 /*about-company*/
@@ -169,32 +176,32 @@ header {
     float: right;
 }
 
-.box img {
+.black-chair {
     width: 582px;
     position: relative;
-    left: -130px;
+    left: calc(50% - 323px);
     top: 82px;
 }
 
-.info {
+.about-company-info {
     float: left;
     text-align: center;
     padding-top: 145px;
     padding-bottom: 130px;
 }
 
-.info h1 {
+.about-company-info h1 {
     font-size: 38px;
     margin-bottom: 50px;
 }
 
-.info p {
+.about-company-info p {
     font-size: 15px;
     line-height: 1.5em;
     margin-bottom: 40px;
 }
 
-.info .button {
+.about-company-button {
     background-color: #2BCBAC;
     color: white;
     width: 268px;
@@ -221,19 +228,21 @@ header {
     vertical-align: top;
     margin-top: 30px;
     text-align: left;
+    height: 225px;
+    margin-right: 16px;
+}
+
+.box-middle:last-child {
+    margin-right: 0;
 }
 
 .chair-clair {
     background-image: url("../images/box1_img.jpg");
-    height: 225px;
-    margin-right: 16px;
     background-size: cover;
 }
 
 .chair-margarita {
     background-image: url("../images/box2_img.jpg");
-    height: 225px;
-    margin-right: 16px;
     background-size: cover;
 }
 
@@ -269,43 +278,39 @@ header {
 
 .product-info p {
     padding-bottom: 20px;
+    line-height: 1.3em;
 }
 
 /*prices*/
 .prices {
     background-color: rgb(239, 239, 239);
-    padding-top: 50px;
     padding-bottom: 65px;
     text-align: center;
 }
 
+
+.section-title {
+    padding-bottom: 35px;
+    padding-top: 50px;
+    text-align: left;
+}
+
+.section-title .line {
+    margin-left: 0;
+    width: 320px;
+}
+
 .list {
-    display: inline-block;
-    vertical-align: top;
-    width: 32%;
     height: 500px;
     border: 2px solid lightgrey;
-    margin-right: 16px;
+    margin-top: 35px;
     background-color: rgb(251, 251, 251);
     position: relative;
+    text-align: center;
 }
 
 .list.special {
     background-color: #2BCBAC;
-}
-
-.list:last-child {
-    margin: 0;
-}
-
-.prices-title {
-    padding-bottom: 70px;
-    text-align: left;
-}
-
-.prices-title .line {
-    margin-left: 0;
-    width: 320px;
 }
 
 .list h3 {
@@ -402,3 +407,91 @@ header {
     background-color: #2BCBAC;
 }
 
+/*contact*/
+.form-details {
+    display: inline-block;
+    width: 64%;
+    vertical-align: top;
+}
+
+.form-accept {
+    display: inline-block;
+    width: 35%;
+    vertical-align: top;
+    text-align: center;
+}
+
+#personal-details input, #personal-details textarea {
+    display: block;
+    border: 1px solid #2BCBAC;
+    padding: 10px;
+    margin-bottom: 30px;
+    font-size: 35px;
+}
+
+#personal-details textarea {
+    padding-right: 0;
+}
+
+#personal-details input::placeholder, #personal-details textarea::placeholder {
+    font-size: 35px;
+    font-weight: normal;
+    font-family: 'Raleway', Arial, sans-serif;
+    color: lightgrey;
+}
+
+#accept {
+    margin-top: 44px;
+}
+
+#accept input[type=checkbox] {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin-right: 20px;
+}
+
+input[type=checkbox]:after {
+    content: " ";
+    background-color: white;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #2BCBAC;
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked:after {
+    content: '';
+    background-image: url("../images/form_ok.jpg");
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#accept input[type=submit] {
+    display: block;
+    margin: 40px auto 0 auto;
+    border: none;
+    border-radius: 10px;
+    background-color: #2BCBAC;
+    color: white;
+    width: 354px;
+    padding: 17px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#accept p {
+    display: inline-block;
+    text-align: left;
+    font-size: 18px;
+    color: darkgrey;
+    line-height: 1.3em;
+}
+
+#accept span {
+    display: block;
+}

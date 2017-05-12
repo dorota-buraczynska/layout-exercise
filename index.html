@@ -10,16 +10,16 @@
     <div class="container">
         <div class="header-logo">SIT <span class="stress">ON</span> CHAIR</div>
         <ul class="header-menu">
-            <li>O FIRMIE
-                <div class="up"></div>
-                <ul class="dropdown-menu">
-                    <li>Aktualności</li>
-                    <li>Nasz team</li>
-                    <li>Historia</li>
-                </ul>
+            <li class="dropdown">
+                <a href="#">O FIRMIE</a>
+                <div class="dropdown-content">
+                    <a href="#">Aktualności</a>
+                    <a href="#">Nasz team</a>
+                    <a href="#">Historia</a>
+                </div>
             </li>
-            <li>GALERIA</li>
-            <li>KONTAKT</li>
+            <li><a href="#">GALERIA</a></li>
+            <li><a href="#">KONTAKT</a></li>
         </ul>
     </div>
 </header>
@@ -30,13 +30,13 @@
             <div class="arrow">&lt;</div>
         </div>
         <div class="box">
-            <img src="images/black_chair.png" alt="black chair">
+            <img class="black-chair" src="images/black_chair.png" alt="black chair">
         </div>
         <div class="box">
-            <div class="info">
+            <div class="about-company-info">
                 <h1>SIT <span class="stress">ON</span> OUR <span class="stress">CHAIR</span></h1>
                 <P>A ad deserunt harum perspiciatis recusandae sequi soluta. Aliquid aperiam dignissimos esse facere illum incidunt ipsa, ipsum labore nesciunt nihil saepe similique veritatis, voluptate?</P>
-                <div class="button">ZOBACZ WIĘCEJ</div>
+                <div class="about-company-button">ZOBACZ WIĘCEJ</div>
             </div>
         </div>
         <div class="small-box">
@@ -72,12 +72,12 @@
 
 <section class="prices">
     <div class="container">
-        <div class="prices-title">
+        <div class="section-title">
             <h2>CENNIK</h2>
             <div class="line"></div>
         </div>
         <div class="prices-lists">
-            <div class="list">
+            <div class="box-middle list">
                 <h3>BASIC PLAN</h3>
                 <div class="price">
                     <h4>85<sup>99</sup></h4>
@@ -93,7 +93,7 @@
                 </div>
             </div>
 
-            <div class="list special">
+            <div class="box-middle list special">
                 <h3>STANDARD PLAN</h3>
                 <div class="price">
                     <h4>95<sup>99</sup></h4>
@@ -110,7 +110,7 @@
                 </div>
             </div>
 
-            <div class="list">
+            <div class="box-middle list">
                 <h3>ADVANCE PLAN</h3>
                 <div class="price">
                     <h4>211<sup>00</sup></h4>
@@ -131,5 +131,30 @@
     </div>
 </section>
 
+<section class="contact">
+    <div class="container">
+        <div class="section-title">
+            <h2>KONTAKT</h2>
+            <div class="line"></div>
+        </div>
+        <div class="form-details">
+            <form id="personal-details">
+                <input type="text" placeholder="Imię" size="27">
+                <input type="email" placeholder="email" size="27">
+                <textarea name="message" placeholder="Wiadomość" rows="5" cols="28"></textarea>
+            </form>
+        </div>
+        <div class="form-accept">
+            <img class="red-chair" src="images/red_chair.png" alt="red chair">
+        <form id="accept">
+            <label>
+                <input type="checkbox" name="ok">
+                <p>Zgadzam się na przetwarzanie <span>danych osobowych</span></p>
+            </label>
+            <input type="submit" form="personal-details" value="WYŚLIJ">
+        </form>
+        </div>
+    </div>
+</section>
 </body>
 </html>
