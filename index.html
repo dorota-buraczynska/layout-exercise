@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sit on chair</title>
     <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
@@ -26,11 +27,16 @@
 
 <section class="about-company">
     <div class="container">
-        <div class="small-box">
+        <div class="small-box-left">
             <div class="arrow">&lt;</div>
         </div>
-        <div class="box">
-            <img class="black-chair" src="images/black_chair.png" alt="black chair">
+        <div class="slider">
+            <img class="slide black-chair" src="images/black_chair.png" alt="black chair">
+            <img class="slide red-chair" src="images/red.png" alt="black chair">
+            <img class="slide orange-chair" src="images/orange.png" alt="black chair">
+        </div>
+        <div class="small-box-right">
+            <div class="arrow">&gt;</div>
         </div>
         <div class="box">
             <div class="about-company-info">
@@ -39,21 +45,19 @@
                 <div class="about-company-button">ZOBACZ WIĘCEJ</div>
             </div>
         </div>
-        <div class="small-box">
-            <div class="arrow right">&gt;</div>
-        </div>
+
     </div>
 </section>
 
 <section class="products">
     <div class="container">
-        <div class="box-middle chair-clair">
+        <div class="box-middle chair-clair product-picture">
             <div class="product-title">
                 <p>Chair CLAIR</p>
                 <div class="line"></div>
             </div>
         </div>
-        <div class="box-middle chair-margarita">
+        <div class="box-middle chair-margarita product-picture">
             <div class="product-title">
                 <p>Chair MARGARITA</p>
                 <div class="line"></div>
@@ -131,6 +135,8 @@
     </div>
 </section>
 
+
+
 <section class="contact">
     <div class="container">
         <div class="section-title">
@@ -169,5 +175,7 @@
         </div>
     </div>
 </footer>
+
+<script src="script/script.js"></script>
 </body>
 </html>

@@ -67,7 +67,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 76px;
+    padding: 0 40px;
 }
 
 .container::after {
@@ -136,9 +136,9 @@ header {
     background-color: #2BCBAC;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+/*.dropdown:hover .dropdown-content {*/
+    /*display: block;*/
+/*}*/
 
 .dropdown-content::before {
     content: "";
@@ -158,24 +158,40 @@ header {
 
 .box {
     float: left;
-    width: 40%;
+    width: 39%;
+    margin-right: 51px;
 }
 
-.small-box {
+.small-box-left {
     float: left;
-    width: 10%;
+    width: 5%;
     padding-top: 250px;
+    cursor: pointer;
+
 }
 
-.right {
+.small-box-right {
     float: right;
+    width: 5%;
+    padding-top: 250px;
+    cursor: pointer;
+
 }
 
-.black-chair {
-    width: 582px;
+.slider {
     position: relative;
-    left: calc(50% - 323px);
-    top: 82px;
+    top: 129px;
+    float: left;
+    width: 45%;
+}
+
+.slide {
+    width: 100%;
+    display: none;
+}
+
+.visible {
+    display: block;
 }
 
 .about-company-info {
@@ -411,9 +427,10 @@ header {
 
 .form-details {
     display: inline-block;
-    width: 60%;
+    width: 58%;
     vertical-align: top;
     margin-top: 20px;
+    margin-right: 18px;
 }
 
 .form-accept {
@@ -421,6 +438,7 @@ header {
     width: 39%;
     vertical-align: top;
     text-align: center;
+    margin-top: -45px;
 }
 
 #personal-details input, #personal-details textarea {
@@ -481,7 +499,7 @@ input[type=checkbox]:checked:after {
     border-radius: 10px;
     background-color: #2BCBAC;
     color: white;
-    width: 354px;
+    width: 295px;
     padding: 17px;
     font-size: 30px;
     font-weight: bold;
@@ -518,4 +536,80 @@ input[type=checkbox]:checked:after {
     color: darkgrey;
     font-size: 20px;
     margin-left: 70px;
+}
+
+.invisible {
+    display: none;
+}
+
+/*calculator*/
+
+
+@media only screen and (max-width: 950px) and (min-width: 654px) {
+    .container {
+        text-align: center;
+    }
+
+    .box {
+        float: none;
+        display: inline-block;
+        margin: 0;
+        width: 100%;
+    }
+
+    .box-middle {
+        width: 45%;
+    }
+
+    .small-box-right {
+        width: 15%;
+        text-align: right;
+        padding-top: 180px;
+    }
+
+    .small-box-left {
+        width: 15%;
+        padding-top: 180px;
+    }
+
+    .slider {
+        width: 70%;
+        top: 44px;
+    }
+
+    .form-details {
+        margin-bottom: 18px;
+        width: 80%;
+    }
+
+    .form-accept {
+        width: 57%;
+    }
+}
+
+@media only screen and (max-width: 653px) {
+    .box-middle {
+        width: 75%;
+    }
+
+    .form-details {
+        width: 100%;
+    }
+
+    .form-accept {
+        width: 100%;
+    }
+
+    .slider {
+        top: 17px;
+        width: 90%;
+    }
+
+    .small-box-right {
+        padding-top: 100px;
+    }
+
+    .small-box-left {
+        padding-top: 100px;
+    }
 }
