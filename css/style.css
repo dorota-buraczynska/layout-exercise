@@ -101,10 +101,10 @@ header {
 }
 
 .header-menu li {
-   display: inline-block;
+    display: inline-block;
 }
 
-.header-menu li>a {
+.header-menu li > a {
     text-align: center;
     text-decoration: none;
     color: white;
@@ -136,8 +136,12 @@ header {
     background-color: #2BCBAC;
 }
 
+.menu-button {
+    display: none;
+}
+
 /*.dropdown:hover .dropdown-content {*/
-    /*display: block;*/
+/*display: block;*/
 /*}*/
 
 .dropdown-content::before {
@@ -188,10 +192,6 @@ header {
 .slide {
     width: 100%;
     display: none;
-}
-
-.visible {
-    display: block;
 }
 
 .about-company-info {
@@ -300,7 +300,6 @@ header {
     padding-bottom: 65px;
     text-align: center;
 }
-
 
 .section-title {
     padding-bottom: 35px;
@@ -544,8 +543,11 @@ input[type=checkbox]:checked:after {
 
 /*calculator*/
 
-
 @media only screen and (max-width: 950px) and (min-width: 654px) {
+    .menu-button {
+        display: none;
+    }
+
     .container {
         text-align: center;
     }
@@ -555,6 +557,10 @@ input[type=checkbox]:checked:after {
         display: inline-block;
         margin: 0;
         width: 100%;
+    }
+
+    .about-company-info {
+        padding-top: 50px;
     }
 
     .box-middle {
@@ -587,9 +593,66 @@ input[type=checkbox]:checked:after {
     }
 }
 
-@media only screen and (max-width: 653px) {
+@media only screen and (max-width: 653px) and (min-width: 400px) {
+    .header-menu {
+        display: none;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        top: 61px;
+        left: 0;
+        background-color: black;
+        z-index: 1;
+    }
+
+    .header-menu li {
+        display: block;
+        padding: 11px 25px;
+    }
+
+    .header-menu li a {
+        padding: 11px 25px;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: relative;
+        top: 8px;
+        background-color: #2BCBAC;
+        font-weight: bold;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    .dropdown-content a:hover {
+        color: black;
+    }
+
+    .dropdown-content::before {
+        border: none;
+    }
+
+    .menu-button {
+        display: block;
+        float: right;
+        background-color: #2BCBAC;
+        color: white;
+        border: none;
+        outline: none;
+        padding: 10px 20px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+
+
+    .header-logo {
+        padding-top: 10px;
+    }
+
     .box-middle {
         width: 75%;
+        margin-right: 0;
     }
 
     .form-details {
@@ -612,4 +675,124 @@ input[type=checkbox]:checked:after {
     .small-box-left {
         padding-top: 100px;
     }
+
+    .box {
+        width: 100%;
+    }
+
+    .about-company-info {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .header-menu {
+        display: none;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        top: 61px;
+        left: 0;
+        background-color: black;
+        z-index: 1;
+    }
+
+    .header-menu li {
+        display: block;
+        padding: 11px 25px;
+    }
+
+    .header-menu li a {
+        padding: 11px 25px;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: relative;
+        top: 8px;
+        background-color: #2BCBAC;
+        font-weight: bold;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    .dropdown-content a:hover {
+        color: black;
+    }
+
+    .dropdown-content::before {
+        border: none;
+    }
+
+    .menu-button {
+        display: block;
+        float: right;
+        background-color: #2BCBAC;
+        color: white;
+        border: none;
+        outline: none;
+        padding: 10px 20px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .header-logo {
+        padding-top: 10px;
+    }
+    .header-menu {
+        display: none;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .box-middle {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .form-details {
+        width: 100%;
+    }
+
+    .form-accept {
+        width: 100%;
+    }
+
+    #personal-details input, textarea {
+        font-size: 20px;
+    }
+
+    #personal-details input::placeholder, #personal-details textarea::placeholder {
+        font-size: 20px;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    .about-company-info {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    .slider {
+        top: 17px;
+        width: 90%;
+    }
+
+    .small-box-right {
+        padding-top: 100px;
+    }
+
+    .small-box-left {
+        padding-top: 100px;
+    }
+}
+
+
+.visible {
+    display: block;
 }

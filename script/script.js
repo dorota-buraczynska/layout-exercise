@@ -4,7 +4,9 @@ var productPicture = document.querySelectorAll('.product-picture');
 var slides = document.querySelector('.slider').children;
 var nextButton = document.querySelector('.small-box-right');
 var prevButton = document.querySelector('.small-box-left');
-console.log(prevButton);
+var menuButton = document.querySelector('.menu-button');
+var menu = document.querySelector('.header-menu');
+console.log(menu);
 
 
 var index = 0;
@@ -36,6 +38,10 @@ dropdown.addEventListener('mouseover', function () {
 
 dropdown.addEventListener('mouseout', function () {
     dropdownContent.style.display = 'none';
+});
+
+menuButton.addEventListener('click', function () {
+    menu.classList.toggle('visible');
 });
 
 
