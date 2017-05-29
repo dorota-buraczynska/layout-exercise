@@ -546,10 +546,6 @@ input[type=checkbox]:checked:after {
     background-color: #f9f9f9;
     padding:30px 0;
 }
-.application h3 {
-    color: #575757;
-    font-size: 18px;
-}
 
 .application header.align_right{
     text-align: right;
@@ -564,7 +560,7 @@ input[type=checkbox]:checked:after {
 }
 
 .image_part {
-    margin-top: 77px;
+    margin-top: 112px;
     width: 35%;
     text-align: end;
 }
@@ -591,9 +587,10 @@ input[type=checkbox]:checked:after {
 }
 
 .list_label {
-    font-size: 30px;
-    color: #e2e2e2;
-    font-family: 'ralewaylight', Arial, Tahoma, sans-serif;
+    font-size: 25px;
+    font-weight: normal;
+    font-family: 'Raleway', Arial, sans-serif;
+    color: lightgrey;
 }
 
 
@@ -760,21 +757,28 @@ input[type=checkbox]:checked:after {
 .list_panel {
     background-color: white;
     border: 1px solid #ccc;
-    width: 288px;
+    width: 280px;
     padding-left: 15px;
     padding-bottom: 10px;
     list-style: none;
     margin: 0;
-    left: 0;
+    left: -1px;
     z-index: 2;
     position: absolute;
-    top: 54px;
+    top: 37px;
     display:none;
 }
 .list_panel li {
     margin-top:10px;
     cursor: pointer;
     color: #585858;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.list_panel li:hover {
+    background-color: #2BCBAC;
+    color: white;
 }
 
 .title_panel {
@@ -858,7 +862,7 @@ input[type=checkbox]:checked:after {
     }
 }
 
-@media only screen and (max-width: 653px) and (min-width: 401px) {
+@media only screen and (max-width: 653px) and (min-width: 411px) {
     .header-menu {
         display: none;
         position: absolute;
@@ -991,7 +995,7 @@ input[type=checkbox]:checked:after {
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 410px) {
     .header-menu {
         display: none;
         position: absolute;
