@@ -12,6 +12,8 @@ var listOfColors = document.querySelectorAll('.list_panel')[1];
 var listOfFabrics = document.querySelectorAll('.list_panel')[2];
 var transportInput = document.querySelector('#transport');
 
+
+//slider
 var index = 0;
 slides[index].classList.add('visible');
 
@@ -35,6 +37,7 @@ prevButton.addEventListener('click', function () {
     slides[index].classList.add('visible');
 });
 
+//menu
 dropdown.addEventListener('mouseover', function () {
     dropdownContent.style.display = 'block';
 });
@@ -47,7 +50,7 @@ menuButton.addEventListener('click', function () {
     menu.classList.toggle('visible');
 });
 
-
+//show and hide product title
 for (var i = 0; i < productPicture.length; i++) {
     productPicture[i].addEventListener('mouseover', function () {
         this.querySelector('.product-title').style.display = 'none';
@@ -57,12 +60,15 @@ for (var i = 0; i < productPicture.length; i++) {
     });
 }
 
+//create your own chair
+//hide andshowchoice Lists
 for (var i = 0; i < listButton.length; i++) {
     listButton[i].addEventListener('click', function () {
         this.nextElementSibling.classList.toggle('visible');
     })
 }
 
+//chose typeof chair
 for (i = 0; i < listOfTypes.children.length; i++) {
     listOfTypes.children[i].addEventListener('click', function () {
         document.querySelector('.panel_right .title_panel').innerHTML = this.innerHTML;
@@ -71,26 +77,23 @@ for (i = 0; i < listOfTypes.children.length; i++) {
     })
 }
 
-for (i = 0; i < listOfColors.children.length; i++) {
-    listOfColors.children[i].addEventListener('click', function () {
-        document.querySelector('.panel_left .color').innerHTML = this.innerHTML;
-        document.querySelector('.panel_right .color').innerHTML = this.dataset.price;
-        this.parentNode.parentNode.children[0].innerHTML = this.innerHTML;
-        this.parentNode.classList.remove('visible');
-        updateTotalSum();
-    })
-}
+//chose color and fabric
+var bindEventListener = function (list, selector) {
+    for (i = 0; i < list.children.length; i++) {
+        list.children[i].addEventListener('click', function () {
+            document.querySelector('.panel_left ' + '.' + selector + '').innerHTML = this.innerHTML;
+            document.querySelector('.panel_right ' + '.' + selector + '').innerHTML = this.dataset.price;
+            this.parentNode.parentNode.children[0].innerHTML = this.innerHTML;
+            this.parentNode.classList.remove('visible');
+            updateTotalSum();
+        })
+    }
+};
 
-for (i = 0; i < listOfFabrics.children.length; i++) {
-    listOfFabrics.children[i].addEventListener('click', function () {
-        document.querySelector('.panel_left .pattern').innerHTML = this.innerHTML;
-        document.querySelector('.panel_right .pattern').innerHTML = this.dataset.price;
-        this.parentNode.parentNode.children[0].innerHTML = this.innerHTML;
-        this.parentNode.classList.remove('visible');
-        updateTotalSum();
-    })
-}
+bindEventListener(listOfFabrics, 'pattern');
+bindEventListener(listOfColors, 'color');
 
+//chose transport
 transportInput.addEventListener('change', function () {
     document.querySelector('.panel_left .transport').innerHTML = document.querySelector('#transport').checked ?
         'Transport' :
@@ -101,6 +104,7 @@ transportInput.addEventListener('change', function () {
     updateTotalSum();
 });
 
+//total price of chair
 var updateTotalSum = function () {
     var totalSum = 0;
     var prices = document.querySelectorAll('.panel_right .value');
@@ -114,6 +118,5 @@ var updateTotalSum = function () {
 };
 
 
-updateTotalSum();
 
 

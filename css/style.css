@@ -741,6 +741,11 @@ input[type=checkbox]:checked:after {
     color: #24baa0;
 }
 
+.panel_left, .panel_right, .sum, .sum_label {
+    text-align: left;
+    padding-left: 20px;
+}
+
 .list_arrow {
     width: 0;
     height: 0;
@@ -859,6 +864,11 @@ input[type=checkbox]:checked:after {
 
     .summary_panel {
         width: 65%;
+    }
+
+    .panel_left, .panel_right, .sum, .sum_label {
+        text-align: left;
+        padding-left: 20px;
     }
 }
 
@@ -1092,6 +1102,10 @@ input[type=checkbox]:checked:after {
         width: 90%;
     }
 
+    .social-links {
+        margin-top: 10px;
+    }
+
     .small-box-right {
         padding-top: 100px;
     }
@@ -1100,11 +1114,30 @@ input[type=checkbox]:checked:after {
         padding-top: 100px;
     }
 
-    .application {
-        display: none;
+    .image_part {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .summary_part {
+        width: 100%;
+        font-size: 0;
+    }
+
+    .summary_panel {
+        height: auto;
+    }
+
+    .panel_right, .panel_left {
+        width: 50%;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .sum_label, .sum {
+        width: 50%;
     }
 }
-
 
 .visible {
     display: block;
