@@ -1121,11 +1121,11 @@ input[type=checkbox]:checked:after {
 
     .summary_part {
         width: 100%;
-        font-size: 0;
     }
 
     .summary_panel {
         height: auto;
+        font-size: 0;
     }
 
     .panel_right, .panel_left {
@@ -1137,6 +1137,7 @@ input[type=checkbox]:checked:after {
     .sum_label, .sum {
         width: 50%;
     }
+
 }
 
 .visible {
